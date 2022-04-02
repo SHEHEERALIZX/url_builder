@@ -3,8 +3,8 @@ require('dotenv').config()
 var express = require('express');
 const mongoose = require('mongoose')
 var app = express();
-
-mongoose.connect(process.env.dbUrl, {
+let url = 'mongodb+srv://sheheer:sheheer@cluster0.optng.mongodb.net/ShoppingCartDB'
+mongoose.connect(process.env.dbUrl || url , {
    useNewUrlParser: true,
    useUnifiedTopology: true
 
